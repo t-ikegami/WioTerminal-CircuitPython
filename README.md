@@ -16,7 +16,7 @@ Wio Terminal 上で動作する CircuitPython 7.0 のアプリケーションを
 - [光センサ + Meter](docs/Meter.md)
 - [赤外線リモコン](docs/IR.md)
 - [加速度センサー](docs/roto.md)
-- [メニュー表示](docs/MainMenu.md)
+- [メニュー表示](docs/Menu.md)
 - [PasswordVault](docs/PasswordVault.md)
 - [NixieClock](docs/NixieClock.md)
 - [Grophics](docs/Grophics.md)
