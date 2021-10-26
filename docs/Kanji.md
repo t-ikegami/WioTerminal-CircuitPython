@@ -17,7 +17,6 @@ https://rictyfonts.github.io <br/>
 
 ## 操作
 ```
-#+begin_example
 import displayio as dpio
 import board
 from RictyKanji import draw_text, set_palette
