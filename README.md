@@ -21,7 +21,7 @@ Wio Terminal 上で動作する CircuitPython 7.0 のアプリケーションを
 - [砂時計](docs/HourGlass.md)
 - [メニュー表示](docs/Menu.md)
 - [PasswordVault](docs/PasswordVault.md)
-- [ニキシー時計](docs/NixieClock.md)
+- [ニキシー管時計](docs/NixieClock.md)
 - [ひらがな表示](docs/DQ.md)
 - [漢字表示](docs/Kanji.md)
 - [Sentence...?](docs/Sentence.md)
