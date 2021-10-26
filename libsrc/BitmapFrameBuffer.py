@@ -298,6 +298,9 @@ class BitmapFrameBuffer (dpio.TileGrid) :	# originally implemented as a subclass
     def blit(self, *param, **keys) :
         self.bmp.blit(*param, **keys)
 
+    def rotozoom(self, src, **keys) :
+        bmt.rotozoom(self.bmp, src, **keys)
+        
     def paint(self, x, y, color, target) :
         """Replace target color starting at (x, y) with color."""
 
