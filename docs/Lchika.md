@@ -1,8 +1,9 @@
 # L チカ
 
 ## 概要
-言わずと知れた LED チカチカ。
-[![YouTube](./Lchika.jpg)](https://www.youtube.com/watch?v=bW0nF_W6Qbg)
+LED をチカチカさせます。
+
+[![YouTube](./Lchika.jpg)](https://www.youtube.com/watch?v=nFXDlmaoZ0o)
 
 ## ファイル
    `Lchika.py`, `LED.bmp`
@@ -19,9 +20,8 @@ import Lchika
 - ←→ : 色の変更
 - 1 : 終了
 
-終了後は Ctrl-D でソフトリセット。
-
-シリアルコンソールのキーボードからも操作可能。(ButtonEvents の機能)
+終了後は Ctrl-D でソフトリセットします。
+キー操作はシリアルコンソールのキーボードからも可能です。(ButtonEvents の機能)
    
 
 
