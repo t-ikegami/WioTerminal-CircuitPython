@@ -4,7 +4,7 @@
 SD カードをマウントし、Pictures ディレクトリ内の画像を表示します。
 画像は 320x240 の BMP 形式 (256 色インデックスカラー) で保存します。
 
-[![YouTube](./ImaveViewer.jpg)](https://www.youtube.com/watch?v=yVXWlPULGgU)
+[![YouTube](./ImageViewer.jpg)](https://www.youtube.com/watch?v=yVXWlPULGgU)
 
 ## ファイル
    `ImageViewer.py`, `/sd/Pictures/*.bmp`
