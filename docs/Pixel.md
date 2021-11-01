@@ -7,7 +7,7 @@
 [![YouTube](./Pixel.jpg)](https://www.youtube.com/watch?v=6AHvsP6kS2U)
 
 ## ファイル
-   `pixel*.py`, `pixel*.dat`
+   `pixel*.py`, `Pixel.bmp`, `pixel*.dat`
 
 ## ライブラリ
    `PixelDisplay.mpy`, `Cursor.mpy`
