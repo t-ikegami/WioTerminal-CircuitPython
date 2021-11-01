@@ -1,0 +1,136 @@
+from micropython import const
+
+MODE_NONE     = const(0)
+MODE_STA      = const(1) 
+MODE_AP       = const(2)
+MODE_STA_AP   = const(3)
+MODE_PROMISC  = const(4)
+MODE_P2P      = const(5)
+
+TCPIP_ADAPTER_IF_STA = const(0)
+TCPIP_ADAPTER_IF_AP  = const(1)
+TCPIP_ADAPTER_IF_ETH = const(2)
+
+SCAN_FULL   = const(0)
+SCAN_SOCIAL = const(1)
+SCAN_ONE    = const(2)
+
+_WEP_ENABLED      = const(0x0001)
+_TKIP_ENABLED     = const(0x0002)
+_AES_ENABLED      = const(0x0004)
+_WSEC_SWFLAG      = const(0x0008)
+_AES_CMAC_ENABLED = const(0x0010)
+
+_SHARED_ENABLED   = const(0x0000_8000)
+_WPA_SECURITY     = const(0x0020_0000)
+_WPA2_SECURITY    = const(0x0040_0000)
+_WPA3_SECURITY    = const(0x0080_0000)
+_WPS_ENABLED      = const(0x1000_0000)
+
+SECURITY_OPEN           = 0
+SECURITY_WEP_PSK        = const(0x0000_0001)	# WEP_ENABLED
+SECURITY_WEP_SHARED     = const(0x0000_8001)	# ( WEP_ENABLED | SHARED_ENABLED )
+SECURITY_WPA_TKIP_PSK   = const(0x0020_0002)	# ( WPA_SECURITY  | TKIP_ENABLED )
+SECURITY_WPA_AES_PSK    = const(0x0020_0004)	# ( WPA_SECURITY  | AES_ENABLED )
+SECURITY_WPA2_AES_PSK   = const(0x0040_0004)	# ( WPA2_SECURITY | AES_ENABLED )
+SECURITY_WPA2_TKIP_PSK  = const(0x0040_0002)	# ( WPA2_SECURITY | TKIP_ENABLED )
+SECURITY_WPA2_MIXED_PSK = const(0x0040_0006)	# ( WPA2_SECURITY | AES_ENABLED | TKIP_ENABLED )
+SECURITY_WPA_WPA2_MIXED = const(0x0060_0004)	# ( WPA_SECURITY  | WPA2_SECURITY )
+SECURITY_WPA2_AES_CMAC  = const(0x0040_0010)	# ( WPA2_SECURITY | AES_CMAC_ENABLED)
+
+SECURITY_WPS_OPEN       = const(0x1000_0000)	# WPS_ENABLED
+SECURITY_WPS_SECURE     = const(0x1000_0004)	# (WPS_ENABLED | AES_ENABLED)
+
+SECURITY_WPA3_AES_PSK 	= const(0x0080_0004)	# (WPA3_SECURITY | AES_ENABLED)
+
+SECURITY_UNKNOWN        = const(-1)
+
+SECURITY_FORCE_32_BIT   = const(0x7fffffff)
+
+ENCRYPTION_UNKNOWN    = const(0)
+ENCRYPTION_OPEN       = const(1)
+ENCRYPTION_WEP40      = const(2)
+ENCRYPTION_WPA_TKIP   = const(3)
+ENCRYPTION_WPA_AES    = const(4)
+ENCRYPTION_WPA2_TKIP  = const(5)
+ENCRYPTION_WPA2_AES   = const(6)
+ENCRYPTION_WPA2_MIXED = const(7)
+ENCRYPTION_WEP104     = const(9)
+ENCRYPTION_UNDEF      = const(0xFF)
+
+# lwip
+AF_INET = const(2)
+SOCK_STREAM = const(1)
+SOCK_DGRAM = const(2)
+SOCK_RAW = const(3)
+
+SO_REUSEADDR   = const(0x0004)
+SO_KEEPALIVE   = const(0x0008)
+SO_BROADCAST   = const(0x0020)
+SO_DEBUG       = const(0x0001)
+SO_ACCEPTCONN  = const(0x0002)
+SO_DONTROUTE   = const(0x0010)
+SO_USELOOPBACK = const(0x0040)
+SO_LINGER      = const(0x0080)
+SO_DONTLINGER  = const(0xFF7F)
+SO_OOBINLINE   = const(0x0100)
+SO_REUSEPORT   = const(0x0200)
+SO_SNDBUF      = const(0x1001)
+SO_RCVBUF      = const(0x1002)
+SO_SNDLOWAT    = const(0x1003)
+SO_RCVLOWAT    = const(0x1004)
+SO_SNDTIMEO    = const(0x1005)
+SO_RCVTIMEO    = const(0x1006)
+SO_ERROR       = const(0x1007)
+SO_TYPE        = const(0x1008)
+SO_CONTIMEO    = const(0x1009)
+SO_NO_CHECK    = const(0x100a)
+
+SOL_SOCKET = const(0xfff)
+
+F_GETFL = const(3)
+F_SETFL = const(4)
+O_NONBLOCK = const(1)
+O_NDELAY = const(1)
+
+MSG_PEEK      = const(0x01)
+MSG_WAITALL   = const(0x02)
+MSG_OOB       = const(0x04)
+MSG_DONTWAIT  = const(0x08)
+MSG_MORE      = const(0x10)
+
+IPPROTO_IP      = const(0)
+IPPROTO_ICMP    = const(1)
+IPPROTO_TCP     = const(6)
+IPPROTO_UDP     = const(17)
+IPPROTO_UDPLITE = const(136)
+IPPROTO_RAW     = const(255)
+
+IP_ADD_MEMBERSHIP  = const(3)
+IP_DROP_MEMBERSHIP = const(4)
+
+INADDR_ANY = (0, 0, 0, 0)
+
+TCP_NODELAY    = const(0x01)
+TCP_KEEPALIVE  = const(0x02)
+TCP_KEEPIDLE   = const(0x03)
+TCP_KEEPINTVL  = const(0x04)
+TCP_KEEPCNT    = const(0x05)
+
+ENOENT         = const(  2)
+EAGAIN         = const( 11)
+EWOULDBLOCK    = const(EAGAIN)
+EPIPE          = const( 32)
+ECONNABORTED   = const(103)
+ECONNRESET     = const(104)
+ENOTCONN       = const(107)
+ECONNREFUSED   = const(111)
+EINPROGRESS    = const(115)
+
+MBEDTLS_ERR_NET_RECV_FAILED       = const(-0x004C)
+MBEDTLS_ERR_NET_SEND_FAILED       = const(-0x004E)
+MBEDTLS_ERR_NET_CONN_RESET        = const(-0x0050)
+MBEDTLS_ERR_SSL_WANT_READ         = const(-0x6900)
+MBEDTLS_ERR_SSL_WANT_WRITE        = const(-0x6880)
+MBEDTLS_ERR_SSL_CLIENT_RECONNECT  = const(-0x6780)
+MBEDTLS_ERR_SSL_PEER_CLOSE_NOTIFY = const(-0x7880)

@@ -35,7 +35,7 @@ def set_background(i) :
     tg  = dpio.TileGrid(bmp, pixel_shader = bmp.pixel_shader)
     g.insert(0, tg)
 
-set_background(6)
+set_background(0)
 disp.show(g)
 disp.refresh()
 
