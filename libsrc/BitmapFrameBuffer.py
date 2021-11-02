@@ -341,7 +341,7 @@ class BitmapFrameBuffer (dpio.TileGrid) :	# originally implemented as a subclass
 
     def draw_text(self, x, y, txt, color, bgcolor = None, align = LEFT, font = FONT, line_height = None) :
         """Draw text at the baseline position (x,y).  Terminal font is used by
-        default, or pass adafrulit_bitmap_font.
+        default, or pass adafruit_bitmap_font.
 
         """
         if line_height is None : line_height = font.get_bounding_box()[1]

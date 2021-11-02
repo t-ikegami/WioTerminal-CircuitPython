@@ -13,9 +13,9 @@
   ```
   adafruit_imageload/
   adafruit_lis3dh.mpy
+  adafruit_bus_device/
   adafruit_hid/
   adafruit_miniqr.mpy
-  adafruit_imageload/
   ```
   また、以下のデータを root にコピーします。
   ```
