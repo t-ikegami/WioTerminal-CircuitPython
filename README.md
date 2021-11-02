@@ -37,7 +37,7 @@ Wio Terminal 上で動作する CircuitPython 7.0 のアプリケーションを
 - [スペクトル表示 (マイク)](docs/Spectrum.md)
 - [ネットワーク接続](docs/RTL.md)
 - [NTP 接続](docs/NTP.md)
-- [Wifi Analyzer](docs/WifiAnalyzer.md)
+- [WiFi Analyzer](docs/WiFiAnalyzer.md)
 - [天気予報](docs/Weather.md)
 - [WEB サーバ](docs/WebServer.md)
 - [QR コード時計](docs/QRClock.md)

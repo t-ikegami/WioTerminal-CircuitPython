@@ -1,10 +1,10 @@
-# 電卓
+# WiFi Analyzer
 
 ## 概要
 こちらの劣化~~パクリ~~移植。<br/>
 https://www.hackster.io/SeeedStudio/dual-band-wifi-analyzer-with-wio-terminal-a806dd
 
-[![YouTube](./WifiAnalyzer.jpg)](https://www.youtube.com/watch?v=)
+[![YouTube](./WiFiAnalyzer.jpg)](https://www.youtube.com/watch?v=btvbIqKud4k)
 
 ## ファイル
    `wifi_analyzer.py`

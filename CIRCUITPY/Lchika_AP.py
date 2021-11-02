@@ -40,8 +40,6 @@ Content_type:text/html\r
 <h1>Wio Terminal</h1>
 <form action='/' method='POST'>
   <input type='submit' name='action' value='LED ON'>
-</form>
-<form action='/' method='POST'>
   <input type='submit' name='action' value='LED OFF'>
 </form>
 </body></html>
