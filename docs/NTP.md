@@ -29,7 +29,7 @@ NTP サーバ (`ntp.nict.jp`) に接続して時刻を取得し、RTC にセッ�
   from binascii import hexlify
   hexlify(cpu.uid)
   ```
-- openssl を使って `wifi_points.enc` を生成します。
+- openssl を使い、母艦上で `wifi_points.enc` を生成します。
   ```
   openssl enc -aes-128-ctr -e -K <uid> -iv <uid> -in wifi_points.py -out wifi_points.enc
   ```
