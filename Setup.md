@@ -17,7 +17,7 @@
   adafruit_hid/
   adafruit_miniqr.mpy
   ```
-  また、以下のデータを root にコピーします。
+  また、以下のデータを CIRCUITPY 直下にコピーします。
   ```
   examples/font5x8.bin
   ```
