@@ -7,16 +7,19 @@ LEFT   = const(0)
 RIGHT  = const(1)
 CENTER = const(2)
 
+def setup_framebuffer(width, height, depth) :
+    bmp = dpio.Bitmap(width, height, depth)
+    pal = dpio.Palette(depth)
+    return BitmapFrameBuffer(bmp, pal)
+
 def setup_standard_display(vertical = False) :
-    pal = dpio.Palette(16)
     if vertical :
-        bmp = dpio.Bitmap(240, 320, 16)
-        bf = BitmapFrameBuffer(bmp, pal)
+        bf = setup_framebuffer(240, 320, 16)
         bf.transpose_xy = True
         bf.flip_x = True
     else :
         bmp = dpio.Bitmap(320, 240, 16)
-        bf = BitmapFrameBuffer(bmp, pal)
+        bf = setup_framebuffer(320, 240, 16)
 
     bf.set_palette( 0, 0x000000, "Black")
     bf.set_palette( 1, 0x0000FF, "Blue")

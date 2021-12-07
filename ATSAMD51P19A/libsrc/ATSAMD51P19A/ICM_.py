@@ -1,0 +1,87 @@
+import uctypes as ct
+
+ICM_ = {
+  'CFG'	: ( 0x00, {
+    'reg'	:   0x00 | ct.UINT32,
+    'WBDIS'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS |  1 << ct.BF_LEN,
+    'EOMDIS'	:   0x00 | ct.BFUINT32 |  1 << ct.BF_POS |  1 << ct.BF_LEN,
+    'SLBDIS'	:   0x00 | ct.BFUINT32 |  2 << ct.BF_POS |  1 << ct.BF_LEN,
+    'BBC'	:   0x00 | ct.BFUINT32 |  4 << ct.BF_POS |  4 << ct.BF_LEN,
+    'ASCD'	:   0x00 | ct.BFUINT32 |  8 << ct.BF_POS |  1 << ct.BF_LEN,
+    'DUALBUFF'	:   0x00 | ct.BFUINT32 |  9 << ct.BF_POS |  1 << ct.BF_LEN,
+    'UIHASH'	:   0x00 | ct.BFUINT32 | 12 << ct.BF_POS |  1 << ct.BF_LEN,
+    'UALGO'	:   0x00 | ct.BFUINT32 | 13 << ct.BF_POS |  3 << ct.BF_LEN,
+    'HAPROT'	:   0x00 | ct.BFUINT32 | 16 << ct.BF_POS |  6 << ct.BF_LEN,
+    'DAPROT'	:   0x00 | ct.BFUINT32 | 24 << ct.BF_POS |  6 << ct.BF_LEN,
+  }),
+  'CTRL'	: ( 0x04, {
+    'reg'	:   0x00 | ct.UINT32,
+    'ENABLE'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS |  1 << ct.BF_LEN,
+    'DISABLE'	:   0x00 | ct.BFUINT32 |  1 << ct.BF_POS |  1 << ct.BF_LEN,
+    'SWRST'	:   0x00 | ct.BFUINT32 |  2 << ct.BF_POS |  1 << ct.BF_LEN,
+    'REHASH'	:   0x00 | ct.BFUINT32 |  4 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RMDIS'	:   0x00 | ct.BFUINT32 |  8 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RMEN'	:   0x00 | ct.BFUINT32 | 12 << ct.BF_POS |  4 << ct.BF_LEN,
+  }),
+  'SR'	: ( 0x08, {
+    'reg'	:   0x00 | ct.UINT32,
+    'ENABLE'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS |  1 << ct.BF_LEN,
+    'RAWRMDIS'	:   0x00 | ct.BFUINT32 |  8 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RMDIS'	:   0x00 | ct.BFUINT32 | 12 << ct.BF_POS |  4 << ct.BF_LEN,
+  }),
+  'IER'	: ( 0x10, {
+    'reg'	:   0x00 | ct.UINT32,
+    'RHC'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RDM'	:   0x00 | ct.BFUINT32 |  4 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RBE'	:   0x00 | ct.BFUINT32 |  8 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RWC'	:   0x00 | ct.BFUINT32 | 12 << ct.BF_POS |  4 << ct.BF_LEN,
+    'REC'	:   0x00 | ct.BFUINT32 | 16 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RSU'	:   0x00 | ct.BFUINT32 | 20 << ct.BF_POS |  4 << ct.BF_LEN,
+    'URAD'	:   0x00 | ct.BFUINT32 | 24 << ct.BF_POS |  1 << ct.BF_LEN,
+  }),
+  'IDR'	: ( 0x14, {
+    'reg'	:   0x00 | ct.UINT32,
+    'RHC'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RDM'	:   0x00 | ct.BFUINT32 |  4 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RBE'	:   0x00 | ct.BFUINT32 |  8 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RWC'	:   0x00 | ct.BFUINT32 | 12 << ct.BF_POS |  4 << ct.BF_LEN,
+    'REC'	:   0x00 | ct.BFUINT32 | 16 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RSU'	:   0x00 | ct.BFUINT32 | 20 << ct.BF_POS |  4 << ct.BF_LEN,
+    'URAD'	:   0x00 | ct.BFUINT32 | 24 << ct.BF_POS |  1 << ct.BF_LEN,
+  }),
+  'IMR'	: ( 0x18, {
+    'reg'	:   0x00 | ct.UINT32,
+    'RHC'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RDM'	:   0x00 | ct.BFUINT32 |  4 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RBE'	:   0x00 | ct.BFUINT32 |  8 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RWC'	:   0x00 | ct.BFUINT32 | 12 << ct.BF_POS |  4 << ct.BF_LEN,
+    'REC'	:   0x00 | ct.BFUINT32 | 16 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RSU'	:   0x00 | ct.BFUINT32 | 20 << ct.BF_POS |  4 << ct.BF_LEN,
+    'URAD'	:   0x00 | ct.BFUINT32 | 24 << ct.BF_POS |  1 << ct.BF_LEN,
+  }),
+  'ISR'	: ( 0x1C, {
+    'reg'	:   0x00 | ct.UINT32,
+    'RHC'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RDM'	:   0x00 | ct.BFUINT32 |  4 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RBE'	:   0x00 | ct.BFUINT32 |  8 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RWC'	:   0x00 | ct.BFUINT32 | 12 << ct.BF_POS |  4 << ct.BF_LEN,
+    'REC'	:   0x00 | ct.BFUINT32 | 16 << ct.BF_POS |  4 << ct.BF_LEN,
+    'RSU'	:   0x00 | ct.BFUINT32 | 20 << ct.BF_POS |  4 << ct.BF_LEN,
+    'URAD'	:   0x00 | ct.BFUINT32 | 24 << ct.BF_POS |  1 << ct.BF_LEN,
+  }),
+  'UASR'	: ( 0x20, {
+    'reg'	:   0x00 | ct.UINT32,
+    'URAT'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS |  3 << ct.BF_LEN,
+  }),
+  'DSCR'	: ( 0x30, {
+    'reg'	:   0x00 | ct.UINT32,
+    'DASA'	:   0x00 | ct.BFUINT32 |  6 << ct.BF_POS | 26 << ct.BF_LEN,
+  }),
+  'HASH'	: ( 0x34, {
+    'reg'	:   0x00 | ct.UINT32,
+    'HASA'	:   0x00 | ct.BFUINT32 |  7 << ct.BF_POS | 25 << ct.BF_LEN,
+  }),
+  'UIHVAL'	: ( 0x38 | ct.ARRAY, 8 | ct.UINT32 ),
+}
+
+ICM = ct.struct(0x42002c00, ICM_)

@@ -1,0 +1,96 @@
+import uctypes as ct
+
+QSPI_ = {
+  'CTRLA'	: ( 0x00, {
+    'reg'	:   0x00 | ct.UINT32,
+    'SWRST'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS |  1 << ct.BF_LEN,
+    'ENABLE'	:   0x00 | ct.BFUINT32 |  1 << ct.BF_POS |  1 << ct.BF_LEN,
+    'LASTXFER'	:   0x00 | ct.BFUINT32 | 24 << ct.BF_POS |  1 << ct.BF_LEN,
+  }),
+  'CTRLB'	: ( 0x04, {
+    'reg'	:   0x00 | ct.UINT32,
+    'MODE'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS |  1 << ct.BF_LEN,
+    'LOOPEN'	:   0x00 | ct.BFUINT32 |  1 << ct.BF_POS |  1 << ct.BF_LEN,
+    'WDRBT'	:   0x00 | ct.BFUINT32 |  2 << ct.BF_POS |  1 << ct.BF_LEN,
+    'SMEMREG'	:   0x00 | ct.BFUINT32 |  3 << ct.BF_POS |  1 << ct.BF_LEN,
+    'CSMODE'	:   0x00 | ct.BFUINT32 |  4 << ct.BF_POS |  2 << ct.BF_LEN,
+    'DATALEN'	:   0x00 | ct.BFUINT32 |  8 << ct.BF_POS |  4 << ct.BF_LEN,
+    'DLYBCT'	:   0x00 | ct.BFUINT32 | 16 << ct.BF_POS |  8 << ct.BF_LEN,
+    'DLYCS'	:   0x00 | ct.BFUINT32 | 24 << ct.BF_POS |  8 << ct.BF_LEN,
+  }),
+  'BAUD'	: ( 0x08, {
+    'reg'	:   0x00 | ct.UINT32,
+    'CPOL'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS |  1 << ct.BF_LEN,
+    'CPHA'	:   0x00 | ct.BFUINT32 |  1 << ct.BF_POS |  1 << ct.BF_LEN,
+    'BAUD'	:   0x00 | ct.BFUINT32 |  8 << ct.BF_POS |  8 << ct.BF_LEN,
+    'DLYBS'	:   0x00 | ct.BFUINT32 | 16 << ct.BF_POS |  8 << ct.BF_LEN,
+  }),
+  'RXDATA'	: ( 0x0C, {
+    'reg'	:   0x00 | ct.UINT32,
+    'DATA'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS | 16 << ct.BF_LEN,
+  }),
+  'TXDATA'	: ( 0x10, {
+    'reg'	:   0x00 | ct.UINT32,
+    'DATA'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS | 16 << ct.BF_LEN,
+  }),
+  'INTENCLR'	: ( 0x14, {
+    'reg'	:   0x00 | ct.UINT32,
+    'RXC'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS |  1 << ct.BF_LEN,
+    'DRE'	:   0x00 | ct.BFUINT32 |  1 << ct.BF_POS |  1 << ct.BF_LEN,
+    'TXC'	:   0x00 | ct.BFUINT32 |  2 << ct.BF_POS |  1 << ct.BF_LEN,
+    'ERROR'	:   0x00 | ct.BFUINT32 |  3 << ct.BF_POS |  1 << ct.BF_LEN,
+    'CSRISE'	:   0x00 | ct.BFUINT32 |  8 << ct.BF_POS |  1 << ct.BF_LEN,
+    'INSTREND'	:   0x00 | ct.BFUINT32 | 10 << ct.BF_POS |  1 << ct.BF_LEN,
+  }),
+  'INTENSET'	: ( 0x18, {
+    'reg'	:   0x00 | ct.UINT32,
+    'RXC'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS |  1 << ct.BF_LEN,
+    'DRE'	:   0x00 | ct.BFUINT32 |  1 << ct.BF_POS |  1 << ct.BF_LEN,
+    'TXC'	:   0x00 | ct.BFUINT32 |  2 << ct.BF_POS |  1 << ct.BF_LEN,
+    'ERROR'	:   0x00 | ct.BFUINT32 |  3 << ct.BF_POS |  1 << ct.BF_LEN,
+    'CSRISE'	:   0x00 | ct.BFUINT32 |  8 << ct.BF_POS |  1 << ct.BF_LEN,
+    'INSTREND'	:   0x00 | ct.BFUINT32 | 10 << ct.BF_POS |  1 << ct.BF_LEN,
+  }),
+  'INTFLAG'	: ( 0x1C, {
+    'reg'	:   0x00 | ct.UINT32,
+    'RXC'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS |  1 << ct.BF_LEN,
+    'DRE'	:   0x00 | ct.BFUINT32 |  1 << ct.BF_POS |  1 << ct.BF_LEN,
+    'TXC'	:   0x00 | ct.BFUINT32 |  2 << ct.BF_POS |  1 << ct.BF_LEN,
+    'ERROR'	:   0x00 | ct.BFUINT32 |  3 << ct.BF_POS |  1 << ct.BF_LEN,
+    'CSRISE'	:   0x00 | ct.BFUINT32 |  8 << ct.BF_POS |  1 << ct.BF_LEN,
+    'INSTREND'	:   0x00 | ct.BFUINT32 | 10 << ct.BF_POS |  1 << ct.BF_LEN,
+  }),
+  'STATUS'	: ( 0x20, {
+    'reg'	:   0x00 | ct.UINT32,
+    'ENABLE'	:   0x00 | ct.BFUINT32 |  1 << ct.BF_POS |  1 << ct.BF_LEN,
+    'CSSTATUS'	:   0x00 | ct.BFUINT32 |  9 << ct.BF_POS |  1 << ct.BF_LEN,
+  }),
+  'INSTRADDR'	: 0x30 | ct.UINT32,
+  'INSTRCTRL'	: ( 0x34, {
+    'reg'	:   0x00 | ct.UINT32,
+    'INSTR'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS |  8 << ct.BF_LEN,
+    'OPTCODE'	:   0x00 | ct.BFUINT32 | 16 << ct.BF_POS |  8 << ct.BF_LEN,
+  }),
+  'INSTRFRAME'	: ( 0x38, {
+    'reg'	:   0x00 | ct.UINT32,
+    'WIDTH'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS |  3 << ct.BF_LEN,
+    'INSTREN'	:   0x00 | ct.BFUINT32 |  4 << ct.BF_POS |  1 << ct.BF_LEN,
+    'ADDREN'	:   0x00 | ct.BFUINT32 |  5 << ct.BF_POS |  1 << ct.BF_LEN,
+    'OPTCODEEN'	:   0x00 | ct.BFUINT32 |  6 << ct.BF_POS |  1 << ct.BF_LEN,
+    'DATAEN'	:   0x00 | ct.BFUINT32 |  7 << ct.BF_POS |  1 << ct.BF_LEN,
+    'OPTCODELEN'	:   0x00 | ct.BFUINT32 |  8 << ct.BF_POS |  2 << ct.BF_LEN,
+    'ADDRLEN'	:   0x00 | ct.BFUINT32 | 10 << ct.BF_POS |  1 << ct.BF_LEN,
+    'TFRTYPE'	:   0x00 | ct.BFUINT32 | 12 << ct.BF_POS |  2 << ct.BF_LEN,
+    'CRMODE'	:   0x00 | ct.BFUINT32 | 14 << ct.BF_POS |  1 << ct.BF_LEN,
+    'DDREN'	:   0x00 | ct.BFUINT32 | 15 << ct.BF_POS |  1 << ct.BF_LEN,
+    'DUMMYLEN'	:   0x00 | ct.BFUINT32 | 16 << ct.BF_POS |  5 << ct.BF_LEN,
+  }),
+  'SCRAMBCTRL'	: ( 0x40, {
+    'reg'	:   0x00 | ct.UINT32,
+    'ENABLE'	:   0x00 | ct.BFUINT32 |  0 << ct.BF_POS |  1 << ct.BF_LEN,
+    'RANDOMDIS'	:   0x00 | ct.BFUINT32 |  1 << ct.BF_POS |  1 << ct.BF_LEN,
+  }),
+  'SCRAMBKEY'	: 0x44 | ct.UINT32,
+}
+
+QSPI = ct.struct(0x42003400, QSPI_)

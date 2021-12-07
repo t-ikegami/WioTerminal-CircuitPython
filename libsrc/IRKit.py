@@ -1,6 +1,5 @@
 import board
 import pulseio as pio
-import pwmio
 import array
 import time
 
@@ -9,13 +8,11 @@ import time
 
 class IROut :
     def __init__(self, IR = board.IR, Tr = 562) :
-        self.pwm = pwmio.PWMOut(IR, frequency = 38000, duty_cycle = 21845)
-        self.pl  = pio.PulseOut(self.pwm)
+        self.pl = pio.PulseOut(IR, frequency = 38000, duty_cycle = 21845)
         self.Tr  = Tr	# in us
 
     def deinit(self) :
         self.pl.deinit()
-        self.pwm.deinit()
         
     def send(self, id, data) :
         if id.bit_length() <= 8 : id = ((0xFF - id) << 8) | id
