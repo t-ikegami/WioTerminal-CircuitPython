@@ -1,9 +1,9 @@
 # ATSAMD51P19A
 
-## Summary
-<span style="color:red;">DANGER:</span> it is very easy to crash Wio Terminal with this.
+**DANGER:** it is very easy to crash Wio Terminal with this.
 Any safeguard and consistency under the CircuitPython can be broken.
 
+## Summary
 Access bare metal peripherals of [SAMD51](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU32/ProductDocuments/DataSheets/SAM_D5x_E5x_Family_Data_Sheet_DS60001507G.pdf) by using uctypes module of MicroPython.
 Every single bit of registers can be manipulated.
 [A custom firmware](./MyCircuitPython7.0+UCTYPES.uf2) with uctypes enabled is required.
