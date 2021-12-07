@@ -33,10 +33,6 @@ pa05 = dio.DigitalInOut(mc.pin.PA05)	# CCL IN[1], 26
 pa06 = dio.DigitalInOut(mc.pin.PA06)	# CCL IN[2], 37
 pa07 = dio.DigitalInOut(mc.pin.PA07)	# CCL OUT[0], 16
 
-pa04.pull = dio.Pull.DOWN
-pa05.pull = dio.Pull.DOWN
-pa06.pull = dio.Pull.DOWN
-
 PORTA.PMUX[2].reg = 0xDD		# FUNC_N = CCL
 PORTA.PMUX[3].reg = 0xDD
 PORTA.PINCFG[7].PMUXEN = 1
