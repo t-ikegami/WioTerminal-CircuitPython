@@ -1,8 +1,12 @@
 # Parse SVD file to generate MCU register accessors by micropython
 # uctypes.  To reduce memory usage, only requied peripherals are
 # imported on-demand by preparing __getattr__ function on the device
-# module generated.  Tested only on ATSAMD51P19A.svd.
-# 
+# module generated.  Tested only on ATSAMD51P19A.svd:
+#
+#   python3 svd2ctypes.py ATSAMD51P19A.svd
+#
+# A module directory ATSAMD51P19A is created.
+#
 from collections import namedtuple
 import xml.etree.ElementTree as ET
 
@@ -224,9 +228,12 @@ class Cluster :
             return f"  '{name}'\t: ( {offset} | ct.ARRAY, {dim}, {ctype} ),"
             
 if __name__ == "__main__" :
-    dev = Device("ATSAMD51P19A.svd")
+    import sys
+
+    dev = Device(sys.argv[1])
     dev.dump()
-    
+
+    # dev = Device("ATSAMD51P19A.svd")
     # print(dev.name)
     # print([ x.name for x in dev.peripherals ])
     # print(dev.peripherals[24].dump())
