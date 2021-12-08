@@ -136,4 +136,4 @@ EVSYS_ = {
   }),
 }
 
-EVSYS = ct.struct(0x4100e000, EVSYS_)
+EVSYS = ct.struct(0x4100e000, EVSYS_, ct.LITTLE_ENDIAN)

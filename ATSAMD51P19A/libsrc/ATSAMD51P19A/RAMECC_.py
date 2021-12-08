@@ -31,4 +31,4 @@ RAMECC_ = {
   }),
 }
 
-RAMECC = ct.struct(0x41020000, RAMECC_)
+RAMECC = ct.struct(0x41020000, RAMECC_, ct.LITTLE_ENDIAN)

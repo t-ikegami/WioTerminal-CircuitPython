@@ -86,4 +86,4 @@ SUPC_ = {
   }),
 }
 
-SUPC = ct.struct(0x40001800, SUPC_)
+SUPC = ct.struct(0x40001800, SUPC_, ct.LITTLE_ENDIAN)

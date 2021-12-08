@@ -115,4 +115,4 @@ DSU_ = {
   }),
 }
 
-DSU = ct.struct(0x41002000, DSU_)
+DSU = ct.struct(0x41002000, DSU_, ct.LITTLE_ENDIAN)

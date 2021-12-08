@@ -173,4 +173,4 @@ PAC_ = {
   }),
 }
 
-PAC = ct.struct(0x40000000, PAC_)
+PAC = ct.struct(0x40000000, PAC_, ct.LITTLE_ENDIAN)

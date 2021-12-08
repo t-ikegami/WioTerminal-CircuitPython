@@ -45,4 +45,4 @@ PCC_ = {
   }),
 }
 
-PCC = ct.struct(0x43002c00, PCC_)
+PCC = ct.struct(0x43002c00, PCC_, ct.LITTLE_ENDIAN)

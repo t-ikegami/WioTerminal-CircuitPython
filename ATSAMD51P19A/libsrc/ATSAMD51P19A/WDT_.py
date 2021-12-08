@@ -38,4 +38,4 @@ WDT_ = {
   'CLEAR'	: 0x0C | ct.UINT8,
 }
 
-WDT = ct.struct(0x40002000, WDT_)
+WDT = ct.struct(0x40002000, WDT_, ct.LITTLE_ENDIAN)

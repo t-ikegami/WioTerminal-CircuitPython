@@ -79,4 +79,4 @@ EIC_ = {
   }),
 }
 
-EIC = ct.struct(0x40002800, EIC_)
+EIC = ct.struct(0x40002800, EIC_, ct.LITTLE_ENDIAN)

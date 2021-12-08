@@ -123,4 +123,4 @@ PDEC_ = {
   }),
 }
 
-PDEC = ct.struct(0x42001c00, PDEC_)
+PDEC = ct.struct(0x42001c00, PDEC_, ct.LITTLE_ENDIAN)

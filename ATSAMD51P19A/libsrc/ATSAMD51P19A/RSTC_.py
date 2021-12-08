@@ -20,4 +20,4 @@ RSTC_ = {
   }),
 }
 
-RSTC = ct.struct(0x40000c00, RSTC_)
+RSTC = ct.struct(0x40000c00, RSTC_, ct.LITTLE_ENDIAN)

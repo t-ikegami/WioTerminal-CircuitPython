@@ -118,4 +118,4 @@ I2S_ = {
   'RXDATA'	: 0x34 | ct.UINT32,
 }
 
-I2S = ct.struct(0x43002800, I2S_)
+I2S = ct.struct(0x43002800, I2S_, ct.LITTLE_ENDIAN)

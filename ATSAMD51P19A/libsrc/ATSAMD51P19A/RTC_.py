@@ -487,4 +487,4 @@ RTC_ = {
   'MODE2'	: ( 0x00, RTC_MODE2 ),
 }
 
-RTC = ct.struct(0x40002400, RTC_)
+RTC = ct.struct(0x40002400, RTC_, ct.LITTLE_ENDIAN)

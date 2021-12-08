@@ -64,4 +64,4 @@ ETM_ = {
   'CIDR3'	: 0xFFC | ct.UINT32,
 }
 
-ETM = ct.struct(0xe0041000, ETM_)
+ETM = ct.struct(0xe0041000, ETM_, ct.LITTLE_ENDIAN)

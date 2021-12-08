@@ -93,4 +93,4 @@ QSPI_ = {
   'SCRAMBKEY'	: 0x44 | ct.UINT32,
 }
 
-QSPI = ct.struct(0x42003400, QSPI_)
+QSPI = ct.struct(0x42003400, QSPI_, ct.LITTLE_ENDIAN)

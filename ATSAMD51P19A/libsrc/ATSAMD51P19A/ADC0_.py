@@ -146,4 +146,4 @@ ADC_ = {
   }),
 }
 
-ADC0 = ct.struct(0x43001c00, ADC_)
+ADC0 = ct.struct(0x43001c00, ADC_, ct.LITTLE_ENDIAN)

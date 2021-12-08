@@ -114,4 +114,4 @@ DWT_ = {
   }),
 }
 
-DWT = ct.struct(0xe0001000, DWT_)
+DWT = ct.struct(0xe0001000, DWT_, ct.LITTLE_ENDIAN)

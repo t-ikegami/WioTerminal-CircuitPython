@@ -105,4 +105,4 @@ MCLK_ = {
   }),
 }
 
-MCLK = ct.struct(0x40000800, MCLK_)
+MCLK = ct.struct(0x40000800, MCLK_, ct.LITTLE_ENDIAN)

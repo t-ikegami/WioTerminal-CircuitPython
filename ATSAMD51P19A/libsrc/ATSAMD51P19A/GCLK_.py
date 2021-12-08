@@ -29,4 +29,4 @@ GCLK_ = {
   }),
 }
 
-GCLK = ct.struct(0x40001c00, GCLK_)
+GCLK = ct.struct(0x40001c00, GCLK_, ct.LITTLE_ENDIAN)

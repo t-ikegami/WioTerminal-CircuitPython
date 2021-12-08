@@ -12,6 +12,8 @@ import xml.etree.ElementTree as ET
 
 bitfield = namedtuple("bitfield", "name offset width")
 
+LAYOUT = "ct.LITTLE_ENDIAN"			# NATIVE add fillers to align clusters
+
 def get_text(xml, tag, default = False) :
     node = xml.find(tag)
     if node is None :
@@ -84,7 +86,7 @@ class Peripheral :
         defs = [ "import uctypes as ct" ]
         if self.parent is not None :
             defs.append( f"from .{self.parent.name}_ import {self.parent.prefix}\n" )
-            defs.append( f"{self.name} = ct.struct({hex(self.base)}, {self.parent.prefix})\n" )
+            defs.append( f"{self.name} = ct.struct({hex(self.base)}, {self.parent.prefix}, {LAYOUT})\n" )
         else :
             defs.append("")
             for r in self.regs :
@@ -96,7 +98,7 @@ class Peripheral :
                 defs.append(r.dump())
             defs.append("}\n")
 
-            defs.append( f"{self.name} = ct.struct({hex(self.base)}, {self.prefix})\n" )
+            defs.append( f"{self.name} = ct.struct({hex(self.base)}, {self.prefix}, {LAYOUT})\n" )
         
         return "\n".join(defs)
         

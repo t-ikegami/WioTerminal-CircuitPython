@@ -84,4 +84,4 @@ ICM_ = {
   'UIHVAL'	: ( 0x38 | ct.ARRAY, 8 | ct.UINT32 ),
 }
 
-ICM = ct.struct(0x42002c00, ICM_)
+ICM = ct.struct(0x42002c00, ICM_, ct.LITTLE_ENDIAN)

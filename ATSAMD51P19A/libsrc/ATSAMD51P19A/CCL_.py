@@ -26,4 +26,4 @@ CCL_ = {
   }),
 }
 
-CCL = ct.struct(0x42003800, CCL_)
+CCL = ct.struct(0x42003800, CCL_, ct.LITTLE_ENDIAN)

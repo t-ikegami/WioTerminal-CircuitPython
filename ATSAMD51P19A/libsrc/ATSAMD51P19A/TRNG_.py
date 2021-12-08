@@ -25,4 +25,4 @@ TRNG_ = {
   'DATA'	: 0x20 | ct.UINT32,
 }
 
-TRNG = ct.struct(0x42002800, TRNG_)
+TRNG = ct.struct(0x42002800, TRNG_, ct.LITTLE_ENDIAN)

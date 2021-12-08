@@ -54,4 +54,4 @@ AES_ = {
   'RANDSEED'	: 0x84 | ct.UINT32,
 }
 
-AES = ct.struct(0x42002400, AES_)
+AES = ct.struct(0x42002400, AES_, ct.LITTLE_ENDIAN)

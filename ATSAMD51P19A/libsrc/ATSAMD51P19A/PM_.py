@@ -42,4 +42,4 @@ PM_ = {
   }),
 }
 
-PM = ct.struct(0x40000400, PM_)
+PM = ct.struct(0x40000400, PM_, ct.LITTLE_ENDIAN)

@@ -91,4 +91,4 @@ DAC_ = {
   'RESULT'	: ( 0x1C | ct.ARRAY, 2 | ct.UINT16 ),
 }
 
-DAC = ct.struct(0x43002400, DAC_)
+DAC = ct.struct(0x43002400, DAC_, ct.LITTLE_ENDIAN)
