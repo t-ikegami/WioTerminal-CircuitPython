@@ -388,4 +388,4 @@ TCC_ = {
   }),
 }
 
-TCC0 = ct.struct(0x41016000, TCC_, ct.LITTLE_ENDIAN)
+TCC0 = ct.struct(0x41016000, TCC_)

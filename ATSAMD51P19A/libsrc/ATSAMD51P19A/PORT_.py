@@ -57,4 +57,4 @@ PORT_ = {
   'GROUP'	: ( 0x00 | ct.ARRAY, 4, PORT_GROUP ),
 }
 
-PORT = ct.struct(0x41008000, PORT_, ct.LITTLE_ENDIAN)
+PORT = ct.struct(0x41008000, PORT_)

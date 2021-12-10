@@ -92,4 +92,4 @@ AC_ = {
   }),
 }
 
-AC = ct.struct(0x42002000, AC_, ct.LITTLE_ENDIAN)
+AC = ct.struct(0x42002000, AC_)

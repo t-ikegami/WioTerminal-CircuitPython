@@ -40,4 +40,4 @@ CoreDebug_ = {
   }),
 }
 
-CoreDebug = ct.struct(0xe000edf0, CoreDebug_, ct.LITTLE_ENDIAN)
+CoreDebug = ct.struct(0xe000edf0, CoreDebug_)

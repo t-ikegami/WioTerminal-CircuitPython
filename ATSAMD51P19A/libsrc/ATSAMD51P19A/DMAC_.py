@@ -263,4 +263,4 @@ DMAC_ = {
   'CHANNEL'	: ( 0x40 | ct.ARRAY, 32, DMAC_CHANNEL ),
 }
 
-DMAC = ct.struct(0x4100a000, DMAC_, ct.LITTLE_ENDIAN)
+DMAC = ct.struct(0x4100a000, DMAC_)

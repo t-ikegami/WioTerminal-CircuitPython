@@ -16,4 +16,4 @@ NVIC_ = {
   }),
 }
 
-NVIC = ct.struct(0xe000e100, NVIC_, ct.LITTLE_ENDIAN)
+NVIC = ct.struct(0xe000e100, NVIC_)

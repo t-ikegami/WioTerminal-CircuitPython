@@ -44,4 +44,4 @@ FPU_ = {
   }),
 }
 
-FPU = ct.struct(0xe000ef30, FPU_, ct.LITTLE_ENDIAN)
+FPU = ct.struct(0xe000ef30, FPU_)

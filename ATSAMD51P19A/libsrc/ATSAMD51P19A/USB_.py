@@ -352,4 +352,4 @@ USB_ = {
   'HOST'	: ( 0x00, USB_HOST ),
 }
 
-USB = ct.struct(0x41000000, USB_, ct.LITTLE_ENDIAN)
+USB = ct.struct(0x41000000, USB_)

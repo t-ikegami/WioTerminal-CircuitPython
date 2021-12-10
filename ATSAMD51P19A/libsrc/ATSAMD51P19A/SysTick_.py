@@ -24,4 +24,4 @@ SysTick_ = {
   }),
 }
 
-SysTick = ct.struct(0xe000e010, SysTick_, ct.LITTLE_ENDIAN)
+SysTick = ct.struct(0xe000e010, SysTick_)

@@ -110,4 +110,4 @@ NVMCTRL_ = {
   }),
 }
 
-NVMCTRL = ct.struct(0x41004000, NVMCTRL_, ct.LITTLE_ENDIAN)
+NVMCTRL = ct.struct(0x41004000, NVMCTRL_)

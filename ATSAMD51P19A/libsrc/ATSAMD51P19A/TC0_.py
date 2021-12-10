@@ -305,4 +305,4 @@ TC_ = {
   'COUNT32'	: ( 0x00, TC_COUNT32 ),
 }
 
-TC0 = ct.struct(0x40003800, TC_, ct.LITTLE_ENDIAN)
+TC0 = ct.struct(0x40003800, TC_)

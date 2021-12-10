@@ -78,4 +78,4 @@ TPI_ = {
   }),
 }
 
-TPI = ct.struct(0xe0040000, TPI_, ct.LITTLE_ENDIAN)
+TPI = ct.struct(0xe0040000, TPI_)

@@ -91,4 +91,4 @@ MPU_ = {
   }),
 }
 
-MPU = ct.struct(0xe000ed90, MPU_, ct.LITTLE_ENDIAN)
+MPU = ct.struct(0xe000ed90, MPU_)

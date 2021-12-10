@@ -145,4 +145,4 @@ SystemControl_ = {
   }),
 }
 
-SystemControl = ct.struct(0xe000e000, SystemControl_, ct.LITTLE_ENDIAN)
+SystemControl = ct.struct(0xe000e000, SystemControl_)

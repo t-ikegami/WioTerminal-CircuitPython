@@ -38,4 +38,4 @@ ITM_ = {
   }),
 }
 
-ITM = ct.struct(0xe0000000, ITM_, ct.LITTLE_ENDIAN)
+ITM = ct.struct(0xe0000000, ITM_)

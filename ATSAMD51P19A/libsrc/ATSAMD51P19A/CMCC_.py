@@ -52,4 +52,4 @@ CMCC_ = {
   'MSR'	: 0x34 | ct.UINT32,
 }
 
-CMCC = ct.struct(0x41006000, CMCC_, ct.LITTLE_ENDIAN)
+CMCC = ct.struct(0x41006000, CMCC_)

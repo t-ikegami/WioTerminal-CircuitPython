@@ -42,4 +42,4 @@ FREQM_ = {
   }),
 }
 
-FREQM = ct.struct(0x40002c00, FREQM_, ct.LITTLE_ENDIAN)
+FREQM = ct.struct(0x40002c00, FREQM_)

@@ -392,4 +392,4 @@ SDHC_ = {
   }),
 }
 
-SDHC0 = ct.struct(0x45000000, SDHC_, ct.LITTLE_ENDIAN)
+SDHC0 = ct.struct(0x45000000, SDHC_)
