@@ -11,6 +11,9 @@ Every single bit of registers can be manipulated.
 The module is generated from [a SVD file](https://github.com/posborne/cmsis-svd/blob/master/data/Atmel/ATSAMD51P19A.svd).
 A crude version of [the converter](./svd2uctypes.py) (written in CPython) is also provided.
 
+## Libraries
+   `ATSAMD51P19A/*`
+
 ## Example
 This example is heavily owed to [デバイスビジネス開拓団](https://jhalfmoon.com/dbc/2021/08/25/iot何をいまさら91-atsamd51、ccl、極小のオンチップfpga/).
 
@@ -71,3 +74,5 @@ output()
 1 1 1 -> 1
 ```
 
+## Applications
+- [LCD Backlight](docs/LCDBacklight.md)
