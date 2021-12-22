@@ -45,3 +45,4 @@ Wio Terminal 上で動作する CircuitPython 7.0 のアプリケーションを
 - [Audio Player](docs/AudioPlayer.md)
 - [StarWars](docs/StarWars.md)
 - [Stage](docs/Stage.md)
+- [マンデルブロベンチマーク](docs/Mandelbrot.md)

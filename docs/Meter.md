@@ -3,7 +3,6 @@
 ## 概要
 こちらの~~パクリ~~移植。<br/>
 https://www.seeedstudio.com/blog/2020/06/17/piechart-and-meters-reading-using-wio-terminal-and-ardupy/ <br/>
-Bitmap への描画ライブラリを整備 (BitmapFrameBuffer.py)
 
 [![YouTube](./Meter.jpg)](https://www.youtube.com/watch?v=81uXKjxUL8U)
 
@@ -11,7 +10,7 @@ Bitmap への描画ライブラリを整備 (BitmapFrameBuffer.py)
    `lightmeter.py`, `font5x8.bin` ([準備](Setup.md) 参照)
 
 ## ライブラリ
-   `BitmapFrameBuffer.mpy`, `Meter.mpy`
+   `Meter.mpy`
 
 ## 操作
 ```
