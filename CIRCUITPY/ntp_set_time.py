@@ -47,7 +47,7 @@ if status is False :
 elif status is not None :
     if ntp_set_time() :
         t = time.localtime()
-        print(f"Time set to {t.tm_year:4d}/{t.tm_mon:02d}/{t.tm_mday:02d} "
+        print(f"Time set to {t.tm_year:4d}/{t.tm_mon:02d}/{t.tm_mday:02d}",
               f"{t.tm_hour:02d}:{t.tm_min:02d}:{t.tm_sec:02d}")
     else :
         print("Cannot connect to time server.")

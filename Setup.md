@@ -2,7 +2,7 @@
 
 - CircuitPython は以下より取得します。<br/>
   https://circuitpython.org/board/seeeduino_wio_terminal/ <br/>
-  7.0.0 で検証しています。
+  7.1.0 で検証しています。
 - 無線通信のファームウェアを 2.1.3_JP にアップデートします。<br/>
   https://wiki.seeedstudio.com/Wio-Terminal-Network-Overview <br/>
 - 外部ライブラリを使用します。<br/>

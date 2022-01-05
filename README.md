@@ -1,7 +1,7 @@
 # WioTerminal-CircuitPython
 CircuitPython appilcations for Wio Terminal
 
-Wio Terminal 上で動作する CircuitPython 7.0 のアプリケーションを公開します。
+Wio Terminal 上で動作する CircuitPython 7.1 のアプリケーションを公開します。
 
 - アプリケーションの説明では、ボタンを左から順に "1", "2", "3", カーソルセンターを "X" と記述します。
   ![Buttons](./Buttons.jpg)
@@ -46,3 +46,5 @@ Wio Terminal 上で動作する CircuitPython 7.0 のアプリケーションを
 - [StarWars](docs/StarWars.md)
 - [Stage](docs/Stage.md)
 - [マンデルブロベンチマーク](docs/Mandelbrot.md)
+
+## [履歴](ChangeLog.md)

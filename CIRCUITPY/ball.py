@@ -70,7 +70,7 @@ background = stage.Grid(bank, XMAX//16, YMAX//16)
 n = 15
 balls = [ Ball() for i in range(n) ]
 
-game = stage.Stage(ugame.display, 24)
+game = stage.Stage(ugame.display, 24, 1)
 game.layers = balls + [background]
 game.render_block()
 

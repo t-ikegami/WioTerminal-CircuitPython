@@ -21,8 +21,8 @@ def reset() :
 def init() :
     global _RTLTransport
     if _RTLTransport is not None: raise RuntimeError("Transport is already active.")
-    reset()
     _RTLTransport = Transport()
+    reset()
 
 def deinit() :
     global _RTLTransport

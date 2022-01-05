@@ -35,8 +35,7 @@ while True :
     if b & be.K_SELECT : break
 
     qr = QRCode(qr_type = 2)
-    qr.add_data(f"{t.tm_year:02d}/{t.tm_mon:02d}/{t.tm_mday:02d} "
-                f"{t.tm_hour:02d}:{t.tm_min:02d}:{t.tm_sec:02d}".encode())
+    qr.add_data(f"{t.tm_year:02d}/{t.tm_mon:02d}/{t.tm_mday:02d} {t.tm_hour:02d}:{t.tm_min:02d}:{t.tm_sec:02d}".encode())
     qr.make(mask_pattern = randint(0, 7))
     m = qr.matrix
     for y in range(25) :
