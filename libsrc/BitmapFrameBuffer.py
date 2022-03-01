@@ -18,7 +18,6 @@ def setup_standard_display(vertical = False) :
         bf.transpose_xy = True
         bf.flip_x = True
     else :
-        bmp = dpio.Bitmap(320, 240, 16)
         bf = setup_framebuffer(320, 240, 16)
 
     bf.set_palette( 0, 0x000000, "Black")
@@ -46,10 +45,16 @@ class BitmapFrameBuffer (dpio.TileGrid) :	# originally implemented as a subclass
         super().__init__(bitmap, pixel_shader = palette)
         self.bmp = bitmap
         self.pal = palette
-        self.width = bitmap.width
-        self.height = bitmap.height
         self._font = None
 
+    @property
+    def width(self) :
+        return self.bmp.width
+
+    @property
+    def height(self) :
+        return self.bmp.height
+        
     def fill(self, color):
         """Fill the entire FrameBuffer with the specified color."""
         self.bmp.fill(color)

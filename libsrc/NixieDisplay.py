@@ -8,8 +8,6 @@ class NixieDisplay(dpio.TileGrid) :
     def __init__(self, width = 5, height = 2) :
         super().__init__(self.bmp, pixel_shader = self.pal, width = width, height = height,
                          tile_width = 64, tile_height = 120, default_tile = 11)
-        self.width = width
-        self.height = height
 
     def set_value(self, value, digit = None, x = 0, y = None, zp = True) :
         idx = x if y is None else x + y * self.width
