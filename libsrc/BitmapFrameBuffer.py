@@ -345,7 +345,11 @@ class BitmapFrameBuffer (dpio.TileGrid) :	# originally implemented as a subclass
         return c.shift_x
 
     def text_width(self, txt, font = FONT) :
-        return sum( font.get_glyph(ord(c)).shift_x for c in txt )
+        def get_width(c) :
+            c = font.get_glyph(ord(c))
+            return 0 if c is None else c.shift_x
+        
+        return sum( get_width(c) for c in txt )
 
     def draw_text(self, x, y, txt, color, bgcolor = None, align = LEFT, font = FONT, line_height = None) :
         """Draw text at the baseline position (x,y).  Terminal font is used by

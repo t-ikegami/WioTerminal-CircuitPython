@@ -8,3 +8,4 @@
   - Adjustment is required for UART communication with RTL.
 - 20220301: Adapt to CircuitPython 7.2
   - TileGrid has now width/height attributes.  Its subclass cannot have the attributes of the same name.
+- 20220524: Adapt to CircuitPython 7.3
