@@ -47,5 +47,6 @@ Wio Terminal 上で動作する CircuitPython 7.1 のアプリケーションを
 - [Stage](docs/Stage.md)
 - [マンデルブロベンチマーク](docs/Mandelbrot.md)
 - [D51](docs/D51.md)
+- [L チカ (asyncio)](docs/Lchika_async.md)
 
 ## [履歴](ChangeLog.md)
