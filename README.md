@@ -46,5 +46,6 @@ Wio Terminal 上で動作する CircuitPython 7.1 のアプリケーションを
 - [StarWars](docs/StarWars.md)
 - [Stage](docs/Stage.md)
 - [マンデルブロベンチマーク](docs/Mandelbrot.md)
+- [D51](docs/D51.md)
 
 ## [履歴](ChangeLog.md)
