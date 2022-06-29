@@ -6,7 +6,7 @@ Any safeguard and consistency under the CircuitPython can be broken.
 ## Summary
 Access bare metal peripherals of [SAMD51](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU32/ProductDocuments/DataSheets/SAM_D5x_E5x_Family_Data_Sheet_DS60001507G.pdf) by using uctypes module of MicroPython.
 Every single bit of registers can be manipulated.
-[A custom firmware](../Firmware/MyCircuitPython7.1.uf2) with uctypes enabled is required.
+[A custom firmware](../Firmware/MyCircuitPython7.3.uf2) with uctypes enabled is required.
 
 The module is generated from [a SVD file](https://github.com/posborne/cmsis-svd/blob/master/data/Atmel/ATSAMD51P19A.svd).
 A crude version of [the converter](./svd2uctypes.py) (written in CPython) is also provided.

@@ -60,7 +60,7 @@ for y in range(-12, 13) :
 
 
 ## 高速版
-実行には native を有効にした[カスタムファームウェア](/Firmware/MyCircuitPython7.1.uf2) が必要になります。
+実行には native を有効にした[カスタムファームウェア](/Firmware/MyCircuitPython7.3.uf2) が必要になります。
 
 ```
 import gc
