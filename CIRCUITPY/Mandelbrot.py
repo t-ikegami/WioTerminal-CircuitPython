@@ -5,11 +5,11 @@ import displayio as dpio
 from ButtonEvents import ButtonEvents
 from micropython import const
 
-WIDTH    = const(160)	# Half width
-HEIGHT   = const(120)	# Half height
+HWIDTH   = const(160)	# Half width
+HHEIGHT  = const(120)	# Half height
 MAX_LOOP = const(128)
 
-bmp = dpio.Bitmap(WIDTH * 2, HEIGHT * 2, 256)
+bmp = dpio.Bitmap(HWIDTH * 2, HHEIGHT * 2, 256)
 pal = dpio.Palette(256)
 
 for i in range(256) :
@@ -42,20 +42,20 @@ def mandel(r0, r1):
     vldr(s14, [r1, 16])	# cy
     vldr(s15, [r1, 20])	# step
 
-    mov(r4, HEIGHT)	# y
+    mov(r4, HHEIGHT)	# y
     neg(r4, r4)
     label(loop_y)
     vmov(s4, r4)
     vcvt_f32_s32(s4, s4)
-    vmul(s4, s4, s15)	# cb = y * step + cy
-    vadd(s4, s4, s14)
-    mov(r3, WIDTH)	# x
+    vmul(s4, s4, s15)	# cb = cy - y * step
+    vsub(s4, s14, s4)
+    mov(r3, HWIDTH)	# x
     neg(r3, r3)
     label(loop_x)
     vmov(s3, r3)
     vcvt_f32_s32(s3, s3)
-    vmul(s3, s3, s15)	# ca = x * step + cx
-    vadd(s3, s3, s13)
+    vmul(s3, s3, s15)	# ca = cx + x * step
+    vadd(s3, s13, s3)
     vadd(s0, s3, s10)	# a = ca
     vadd(s1, s4, s10)	# b = cb
     vmul(s20, s0, s0)	# a*a
@@ -80,10 +80,10 @@ def mandel(r0, r1):
     strb(r5, [r0, 0])
     add(r0, 1)
     add(r3, 1)
-    cmp(r3, WIDTH)
+    cmp(r3, HWIDTH)
     blt(loop_x)
     add(r4, 1)
-    cmp(r4, HEIGHT)
+    cmp(r4, HHEIGHT)
     blt(loop_y)
 
 param = array.array("f", (0.0, 2.0, 4.0, -0.7, 0.0, 0.0125 ))
@@ -110,11 +110,11 @@ while True :
         if cx > 0.9 : continue
         param[3] = cx
     elif b & be.K_UP :
-        cy = param[4] - 16 * param[5]
+        cy = param[4] + 16 * param[5]
         if cy < -1.2 : continue
         param[4] = cy
     elif b & be.K_DOWN :
-        cy = param[4] + 16 * param[5]
+        cy = param[4] - 16 * param[5]
         if cy > 1.2 : continue
         param[4] = cy
     elif b & be.K_O :
