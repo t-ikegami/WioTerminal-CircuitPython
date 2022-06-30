@@ -45,7 +45,6 @@ class BitmapFrameBuffer (dpio.TileGrid) :	# originally implemented as a subclass
         super().__init__(bitmap, pixel_shader = palette)
         self.bmp = bitmap
         self.pal = palette
-        self._font = None
 
     @property
     def width(self) :
@@ -314,7 +313,7 @@ class BitmapFrameBuffer (dpio.TileGrid) :	# originally implemented as a subclass
 
         bmt.boundary_fill(self.bmp, x, y, color, target)
         
-    def draw_char(self, x, y, c, color, bgcolor = None, font = FONT) :
+    def draw_char(self, x, y, c, color, bgcolor = None, size = 1, font = FONT) :
         """Draw character with terminal font"""
         # (x0,y0) <- (x,y) is updated here
         #    +--------+
@@ -327,156 +326,47 @@ class BitmapFrameBuffer (dpio.TileGrid) :	# originally implemented as a subclass
         #  (x,y)   (x1,y1)
         c = font.get_glyph(ord(c))
         if c is None : return 0
-        x += c.dx
-        y -= c.height + c.dy
+        x += c.dx * size
+        y -= (c.height + c.dy) * size
         x0 = max(x, 0)
         y0 = max(y, 0)
-        x1 = min(x + c.width,  self.width)
-        y1 = min(y + c.height, self.height)
-        if x0 >= x1 or y0 >= y1 : return c.shift_x
-        ox = c.tile_index * c.width - x
+        x1 = min(x + size * c.width,  self.width)
+        y1 = min(y + size * c.height, self.height)
+        if x0 >= x1 or y0 >= y1 : return c.shift_x * size
+        ox = c.tile_index * c.width * size - x
         oy = -y
         for y in range(y0, y1) :
             for x in range(x0, x1) :
-                if c.bitmap[ox + x, oy + y] :
+                if c.bitmap[(ox + x)//size, (oy + y)//size] :
                     self.bmp[x, y] = color
                 elif bgcolor is not None :
                     self.bmp[x, y] = bgcolor
-        return c.shift_x
+        return c.shift_x * size
 
-    def text_width(self, txt, font = FONT) :
+    def text_width(self, txt, size = 1, font = FONT) :
         def get_width(c) :
             c = font.get_glyph(ord(c))
             return 0 if c is None else c.shift_x
         
-        return sum( get_width(c) for c in txt )
+        return sum( get_width(c) for c in txt ) * size
 
-    def draw_text(self, x, y, txt, color, bgcolor = None, align = LEFT, font = FONT, line_height = None) :
+    def draw_text(self, x, y, txt, color, bgcolor = None, align = LEFT, size = 1,
+                  font = FONT, line_height = None) :
         """Draw text at the baseline position (x,y).  Terminal font is used by
         default, or pass adafruit_bitmap_font.
 
         """
-        if line_height is None : line_height = font.get_bounding_box()[1]
+        if line_height is None : line_height = font.get_bounding_box()[1] * size
         iy = y
         for line in txt.split("\n") :
-            l = self.text_width(line, font)
+            l = self.text_width(line, size, font)
             ix = x          if align == LEFT  else \
                  x - l      if align == RIGHT else \
                  x - l // 2
             for c in line :
-                ix += self.draw_char(ix, iy, c, color, bgcolor, font)
+                ix += self.draw_char(ix, iy, c, color, bgcolor, size, font)
             iy += line_height
         return (ix, iy - line_height)
-        
-    def text(self, string, x, y, color, *, font_name="font5x8.bin", size=1):
-        """Place text on the screen in variables sizes. Breaks on \n to next line.
-
-        Does not break on line going off screen.
-        """
-        # determine our effective width/height, taking rotation into account
-        frame_width = self.width
-        frame_height = self.height
-
-        for chunk in string.split("\n"):
-            if not self._font or self._font.font_name != font_name:
-                # load the font!
-                self._font = BitmapFont(font_name)
-            width = self._font.font_width
-            height = self._font.font_height
-            for i, char in enumerate(chunk):
-                char_x = x + (i * (width + 1)) * size
-                if (
-                    char_x + (width * size) > 0
-                    and char_x < frame_width
-                    and y + (height * size) > 0
-                    and y < frame_height
-                ):
-                    self._font.draw_char(char, char_x, y, self, color, size=size)
-            y += height * size
-
-            
-# MicroPython basic bitmap font renderer.
-# Author: Tony DiCola
-# License: MIT License (https://opensource.org/licenses/MIT)
-import os
-import struct
-
-class BitmapFont:
-    """A helper class to read binary font tiles and 'seek' through them as a
-    file to display in a framebuffer. We use file access so we dont waste 1KB
-    of RAM on a font!"""
-
-    def __init__(self, font_name="font5x8.bin"):
-        # Specify the drawing area width and height, and the pixel function to
-        # call when drawing pixels (should take an x and y param at least).
-        # Optionally specify font_name to override the font file to use (default
-        # is font5x8.bin).  The font format is a binary file with the following
-        # format:
-        # - 1 unsigned byte: font character width in pixels
-        # - 1 unsigned byte: font character height in pixels
-        # - x bytes: font data, in ASCII order covering all 255 characters.
-        #            Each character should have a byte for each pixel column of
-        #            data (i.e. a 5x8 font has 5 bytes per character).
-        self.font_name = font_name
-
-        # Open the font file and grab the character width and height values.
-        # Note that only fonts up to 8 pixels tall are currently supported.
-        try:
-            self._font = open(self.font_name, "rb")
-            self.font_width, self.font_height = struct.unpack("BB", self._font.read(2))
-            # simple font file validation check based on expected file size
-            if 2 + 256 * self.font_width != os.stat(font_name)[6]:
-                raise RuntimeError("Invalid font file: " + font_name)
-        except OSError:
-            print("Could not find font file", font_name)
-            raise
-        except OverflowError:
-            # os.stat can throw this on boards without long int support
-            # just hope the font file is valid and press on
-            pass
-
-    def deinit(self):
-        """Close the font file as cleanup."""
-        self._font.close()
-
-    def __enter__(self):
-        """Initialize/open the font file"""
-        self.__init__()
-        return self
-
-    def __exit__(self, exception_type, exception_value, traceback):
-        """cleanup on exit"""
-        self.deinit()
-
-    def draw_char(
-        self, char, x, y, framebuffer, color, size=1
-    ):  # pylint: disable=too-many-arguments
-        """Draw one character at position (x,y) to a framebuffer in a given color"""
-        size = max(size, 1)
-        # Don't draw the character if it will be clipped off the visible area.
-        # if x < -self.font_width or x >= framebuffer.width or \
-        #   y < -self.font_height or y >= framebuffer.height:
-        #    return
-        # Go through each column of the character.
-        for char_x in range(self.font_width):
-            # Grab the byte for the current column of font data.
-            self._font.seek(2 + (ord(char) * self.font_width) + char_x)
-            try:
-                line = struct.unpack("B", self._font.read(1))[0]
-            except RuntimeError:
-                continue  # maybe character isnt there? go to next
-            # Go through each row in the column byte.
-            for char_y in range(self.font_height):
-                # Draw a pixel for each bit that's flipped on.
-                if (line >> char_y) & 0x1:
-                    framebuffer.rect(
-                        x + char_x * size, y + char_y * size, size, size, color, fill = True
-                    )
-
-    def width(self, text):
-        """Return the pixel width of the specified text message."""
-        return len(text) * (self.font_width + 1)
-            
         
 if __name__ == "__main__" :
     import board

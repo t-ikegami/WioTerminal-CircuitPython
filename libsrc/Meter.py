@@ -3,7 +3,7 @@ from micropython import const
 import displayio as dpio
 import vectorio as vio
 import ulab.numpy as np
-from BitmapFrameBuffer import BitmapFrameBuffer
+from BitmapFrameBuffer import BitmapFrameBuffer, CENTER, RIGHT
 
 ARM_LENGTH = const(110)
 ARM_WIDTH  = const(5)
@@ -76,15 +76,15 @@ class Meter (dpio.Group):
                 y = int(self.size * (sy[idx] * (100 + 15 + 10) + 140))
 
                 if(i/25 == -2 ):
-                    bf.text("0",   x-2, y - 9, bf.BLACK)
+                    bf.draw_text(x, y,     "0",   bf.BLACK, align = CENTER)
                 elif (i/25 == -1 ):
-                    bf.text("25",  x-5, y - 6, bf.BLACK)
+                    bf.draw_text(x, y + 3, "25",  bf.BLACK, align = CENTER)
                 elif (i/25 == -0 ):
-                    bf.text("50",  x-5, y - 4, bf.BLACK)
+                    bf.draw_text(x, y + 5, "50",  bf.BLACK, align = CENTER)
                 elif (i/25 == 1 ):
-                    bf.text("75",  x-5, y - 6, bf.BLACK)
+                    bf.draw_text(x, y + 3, "75",  bf.BLACK, align = CENTER)
                 elif (i/25 == 2 ): 
-                    bf.text("100", x-7, y - 9, bf.BLACK)
+                    bf.draw_text(x, y,     "100", bf.BLACK, align = CENTER)
             
                 # Now draw the arc of the scale
                 # sx = math.cos((i + 5 - 90) * RADIAN)
@@ -95,8 +95,8 @@ class Meter (dpio.Group):
                 # if (i < 50):
                 #     tft.drawLine(int(x0), int(y0), int(x1), int(y1), tft.color.BLACK)
 
-        bf.text(title, int(self.size * (5 + 230 - 40)), int(self.size * (119 - 20)), bf.BLACK)
-        bf.text(title, int(self.size * 120)-5*len(title), int(self.size * 70), bf.BLACK, size = 2)
+        bf.draw_text(int(self.size * 230), int(self.size * 119), title, bf.BLACK, align = RIGHT)
+        bf.draw_text(int(self.size * 120), int(self.size *  90), title, bf.BLACK, align = CENTER, size = 2)
 
         self.width  = bf.width
         self.height = bf.height

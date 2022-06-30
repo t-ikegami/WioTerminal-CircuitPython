@@ -50,5 +50,7 @@ Wio Terminal 上で動作する CircuitPython 7.3 のアプリケーションを
 - [L チカ (asyncio)](docs/Lchika_async.md)
 - [uctypes](ATSAMD51P19A/README.md)
 - [マンデルブロビューワ](docs/MandelbrotViewer.md)
+- [角度計](docs/AngleGauge.md)
+- [風車](docs/Pinwheel.md)
 
 ## [履歴](ChangeLog.md)
