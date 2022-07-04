@@ -5,7 +5,7 @@ Stage は CircuitPython 用のゲームライブラリです。
 Wio Terminal への移植はこちらを参照: <br/>
 https://qiita.com/inachi/items/78b3747b84671c098765
 
-Stage を組み込んだカスタムファームウェアが必要になります。
+Stage を組み込んだ[カスタムファームウェア](/Firmware/MyCircuitPython7.3.uf2)が必要になります。
 CircuitPython 7.0 で `gamepad` モジュールがなくなったので、`ugame.py` を差し替えています。
 また CircuitPython 7.1 より scale がサポートされ、Wio Terminal でもかなり「使える」ようになりました。
 

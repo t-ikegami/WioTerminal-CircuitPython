@@ -4,6 +4,8 @@
 こちらの~~パクリ~~移植。<br/>
 https://hackaday.io/project/184322-nixie-tubed-angle-gauge
 
+![AngleGauge](./AngleGauge.jpg)
+
 ## ファイル
    [`angle_gauge.py`](/CIRCUITPY/angle_gauge.py)
 

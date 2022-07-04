@@ -7,7 +7,7 @@ http://www.asciimation.co.nz
 [![YouTube](./StarWars.jpg)](https://www.youtube.com/watch?v=eFtTZiYG_i8)
 
 データはローカルに保持し、ネットワーク接続はしません。
-データ圧縮のため、`uzlib` 込みのカスタムファームウェアが必要になります。
+データ圧縮のため、`uzlib` 込みの[カスタムファームウェア](/Firmware/MyCircuitPython7.3.uf2)が必要になります。
 
 ## ファイル
    [`starwars.py`](/CIRCUITPY/starwars.py), `sw1.txt.gz`

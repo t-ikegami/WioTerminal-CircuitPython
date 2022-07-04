@@ -6,6 +6,8 @@ https://github.com/shapoco/picosys-mandelbrot <br/>
 高速化の工夫を放棄して FPU をぶんまわしています。
 実行には native を有効にした[カスタムファームウェア](/Firmware/MyCircuitPython7.3.uf2) が必要です。
 
+[![YouTube](./MandelbrotViewer.jpg)](https://www.youtube.com/watch?v=dgkFT8PU9BU)
+
 ## ファイル
    [`Mandelbrot.py`](/CIRCUITPY/Mandelbrot.py)
 
