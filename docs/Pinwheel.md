@@ -4,5 +4,5 @@
 マイクに息を吹きかけると風車が回ります。
 
 ## ファイル
-   `pinwheel.py`
+   [`pinwheel.py`](/CIRCUITPY/pinwheel.py)
 

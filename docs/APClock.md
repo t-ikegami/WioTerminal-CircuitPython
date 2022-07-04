@@ -6,5 +6,5 @@
 ![SSID Clock](./APClock.jpg)
 
 ## ファイル
-   `apclock.py`
+   [`apclock.py`](/CIRCUITPY/apclock.py)
 

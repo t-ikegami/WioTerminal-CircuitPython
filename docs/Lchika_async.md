@@ -4,7 +4,7 @@
 asyncio を使って LED をゆっくり点滅します。
 
 ## ファイル
-   `Lchika_async.py`
+   [`Lchika_async.py`](/CIRCUITPY/Lchika_async.py)
 
 ## ライブラリ
    [`asyncio`](https://github.com/adafruit/Adafruit_CircuitPython_asyncio)

@@ -7,7 +7,7 @@ SD カードに保存された MP3 ファイルを再生します。
 [![YouTube](./AudioPlayer.jpg)](https://www.youtube.com/watch?v=s8dfvTYT9N0)
 
 ## ファイル
-   `AudioPlayer.py`, `/sd/Music/*.mp3`
+   [`AudioPlayer.py`](/CIRCUITPY/AudioPlayer.py), `/sd/Music/*.mp3`
 
 ## 操作
 Wio Terminal の DAC 出力にダイソースピーカーを接続します。

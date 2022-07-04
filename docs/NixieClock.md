@@ -10,10 +10,10 @@ https://macsbug.wordpress.com/2020/05/25/wio-nixie-tube-clock/ <br/>
 [![YouTube](./NixieClock.jpg)](https://www.youtube.com/watch?v=ZNuJ1kKnBHc)
 
 ## ファイル
-   `nixie_clock.py`, `nixie.bmp`
+   [`nixie_clock.py`](/CIRCUITPY/nixie_clock.py), `nixie.bmp`
 
 ## ライブラリ
-   `NixieDisplay.mpy`
+   [`NixieDisplay.mpy`](/libsrc/NixieDisplay.py)
 
 ## 操作
 - "X" で 日時表示→LightMeter→秒表示 と切り替わります。<br/>

@@ -6,10 +6,10 @@ Bitmap への描画ライブラリを整備しました。
 [![YouTube](./Grophics.jpg)](https://www.youtube.com/watch?v=D_v0U4ZifK4)
 
 ## ファイル
-   `grophics.py`
+   [`grophics.py`](/CIRCUITPY/grophics.py)
 
 ## ライブラリ
-   `BitmapFrameBuffer.mpy`
+   [`BitmapFrameBuffer.mpy`](/libsrc/BitmapFrameBuffer.py)
 
 ## 操作
 ```

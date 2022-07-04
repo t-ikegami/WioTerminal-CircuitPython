@@ -7,10 +7,10 @@ https://www.seeedstudio.com/blog/2020/06/17/piechart-and-meters-reading-using-wi
 [![YouTube](./Meter.jpg)](https://www.youtube.com/watch?v=81uXKjxUL8U)
 
 ## ファイル
-   `lightmeter.py`
+   [`lightmeter.py`](/CIRCUITPY/lightmeter.py)
 
 ## ライブラリ
-   `Meter.mpy`
+   [`Meter.mpy`](/libsrc/Meter.py)
 
 ## 操作
 ```

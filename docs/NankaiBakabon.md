@@ -8,10 +8,10 @@ https://www.vector.co.jp/soft/dos/amuse/se007728.html <br/>
 [![YouTube](./NankaiBakabon.jpg)](https://www.youtube.com/watch?v=Tc6WoQRmjMM)
 
 ## ファイル
-   `nanba.py`, `nanba_dic/*.nb1`
+   [`nanba.py`](/CIRCUITPY/nanba.py), `nanba_dic/*.nb1`
 
 ## ライブラリ
-   `KanjiTerminal.mpy`, `NankaiBakabon.mpy`
+   [`KanjiTerminal.mpy`](/libsrc/KanjiTerminal.py), [`NankaiBakabon.mpy`](/libsrc/NankaiBakabon.py)
 
 ## 操作
 - ←→ : 辞書を差し替えます。

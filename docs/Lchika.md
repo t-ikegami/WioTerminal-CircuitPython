@@ -6,10 +6,10 @@ LED をチカチカさせます。
 [![YouTube](./Lchika.jpg)](https://www.youtube.com/watch?v=nFXDlmaoZ0o)
 
 ## ファイル
-   `Lchika.py`, `LED.bmp`
+   [`Lchika.py`](/CIRCUITPY/Lchika.py), `LED.bmp`
 
 ## ライブラリ
-   `ButtonEvents.mpy`, `adafruit_imageload`
+   [`ButtonEvents.mpy`](/libsrc/ButtonEvents.py), `adafruit_imageload`
 
 ## 操作
 ```

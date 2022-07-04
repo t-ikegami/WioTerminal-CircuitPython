@@ -7,7 +7,7 @@
 [![YouTube](./Neko.jpg)](https://www.youtube.com/watch?v=ZIE4joayFnw)
 
 ## ファイル
-   `neko_calendar.py`, `neko_clock.py`
+   [`neko_calendar.py`](/CIRCUITPY/neko_calendar.py), [`neko_clock.py`](/CIRCUITPY/neko_clock.py)
 
 ## 操作
 - ↑↓←→ "X" : カレンダー/時計の表示位置を変更します。

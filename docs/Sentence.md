@@ -8,10 +8,10 @@ https://www.vector.co.jp/soft/mac/writing/se090025.html <br/>
 [![YouTube](./Sentence.jpg)](https://www.youtube.com/watch?v=fEH1IJdefBM)
 
 ## ファイル
-   `sen.py`, `sen_dic/*.dic`
+   [`sen.py`](/CIRCUITPY/sen.py), `sen_dic/*.dic`
 
 ## ライブラリ
-   `Sentence.mpy`
+   [`Sentence.mpy`](/libsrc/Sentence.py)
 
 ## 操作
 - ←→ : 辞書を切り替えます。

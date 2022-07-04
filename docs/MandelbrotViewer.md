@@ -7,7 +7,7 @@ https://github.com/shapoco/picosys-mandelbrot <br/>
 実行には native を有効にした[カスタムファームウェア](/Firmware/MyCircuitPython7.3.uf2) が必要です。
 
 ## ファイル
-   `Mandelbrot.py`
+   [`Mandelbrot.py`](/CIRCUITPY/Mandelbrot.py)
 
 ## 操作
 - ←→↑↓ : 表示範囲を移動します。

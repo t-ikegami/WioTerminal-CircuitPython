@@ -7,10 +7,10 @@ SD カードをマウントし、Pictures ディレクトリ内の画像を表�
 [![YouTube](./ImageViewer.jpg)](https://www.youtube.com/watch?v=yVXWlPULGgU)
 
 ## ファイル
-   `ImageViewer.py`, `/sd/Pictures/*.bmp`
+   [`ImageViewer.py`](/CIRCUITPY/ImageViewer.py), `/sd/Pictures/*.bmp`
 
 ## ライブラリ
-   `mount_sd.mpy`
+   [`mount_sd.mpy`](/libsrc/mount_sd.py)
 
 ## 操作
 約10秒で次の画像に切り替わります。

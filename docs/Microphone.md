@@ -12,6 +12,6 @@ CircuitPython から `analogio.AnalogIn` を繰り返し呼ぶことで、最大
 
 
 ## ファイル
-   `mic.py`
+   [`mic.py`](/CIRCUITPY/mic.py)
 
 

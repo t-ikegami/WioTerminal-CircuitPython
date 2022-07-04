@@ -13,7 +13,7 @@ IR リモコンの送受信。
 [![YouTube](./IR.jpg)](https://www.youtube.com/watch?v=tC1Tco1loHk)
 
 ## ライブラリ
-   `IRKit.mpy`
+   [`IRKit.mpy`](/libsrc/IRKit.py)
 
 ## 操作
 ```

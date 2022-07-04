@@ -6,5 +6,5 @@
 [![YouTube](./Spectrum.jpg)](https://www.youtube.com/watch?v=kNDoV1d7u4U)
 
 ## ファイル
-   `spectrum.py`
+   [`spectrum.py`](/CIRCUITPY/spectrum.py)
 

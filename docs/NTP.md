@@ -9,10 +9,10 @@ NTP サーバ (`ntp.nict.jp`) に接続して時刻を取得し、RTC にセッ�
 [![YouTube](./NTP.jpg)](https://www.youtube.com/watch?v=_JILjnDknFs)
 
 ## ファイル
-   `ntp_set_time.py`, `wifi_points.enc`
+   [`ntp_set_time.py`](/CIRCUITPY/ntp_set_time.py), `wifi_points.enc`
 
 ## ライブラリ
-   `wifi_connect.mpy`
+   [`wifi_connect.mpy`](/libsrc/wifi_connect.py)
 
 ## 操作
 あらかじめ、利用可能な WiFi アクセスポイントのリスト `wifi_points.py` を、以下の形式で用意します。

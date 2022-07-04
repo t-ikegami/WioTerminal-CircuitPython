@@ -14,5 +14,5 @@ CircuitPython 7.0 で `gamepad` モジュールがなくなったので、`ugame
 デモのボールを増やしました。
 
 ## ファイル
-   `ball.py`, `ball.bmp`
+   [`ball.py`](/CIRCUITPY/ball.py), `ball.bmp`
 

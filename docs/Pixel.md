@@ -7,10 +7,10 @@
 [![YouTube](./Pixel.jpg)](https://www.youtube.com/watch?v=6AHvsP6kS2U)
 
 ## ファイル
-   `pixel*.py`, `Pixel.bmp`, `pixel*.dat`
+   [`pixel*.py`](/CIRCUITPY/pixel.py), `Pixel.bmp`, `pixel*.dat`
 
 ## ライブラリ
-   `PixelDisplay.mpy`, `Cursor.mpy`
+   [`PixelDisplay.mpy`](/libsrc/PixelDisplay.py), [`Cursor.mpy`](/libsrc/Cursor.py)
 
 ## 操作
 サムネール画面:

@@ -9,8 +9,8 @@ https://rictyfonts.github.io
 [![YouTube](./DQ.jpg)](https://www.youtube.com/watch?v=3PjxzL76TdA)
 
 ## ファイル
-   `dq.py`, `font/RictyBold.bmp`, `font/RictyBoldH.bmp`
+   [`dq.py`](/CIRCUITPY/dq.py), `font/RictyBold.bmp`, `font/RictyBoldH.bmp`
 
 ## ライブラリ
-   `RictyBoldTerminal.mpy`
+   [`RictyBoldTerminal.mpy`](/libsrc/RictyBoldTerminal.py)
 

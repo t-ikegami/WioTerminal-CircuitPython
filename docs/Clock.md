@@ -7,10 +7,10 @@
 [![YouTube](./Clock.jpg)](https://www.youtube.com/watch?v=Au1QUBHVbKE)
 
 ## ファイル
-   `clock.py`
+   [`clock.py`](/CIRCUITPY/clock.py)
 
 ## ライブラリ
-   `AnalogClock.mpy`
+   [`AnalogClock.mpy`](/libsrc/AnalogClock.py)
 
 ## 操作
 日中と夜間で文字盤の色が変わります。

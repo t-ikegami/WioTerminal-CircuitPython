@@ -10,10 +10,10 @@ IR リモコンを使った入力も可能です。
 [![YouTube](./Calculator.jpg)](https://www.youtube.com/watch?v=jnA3pM0FfNg)
 
 ## ファイル
-   `calc.py`
+   [`calc.py`](/CIRCUITPY/calc.py)
 
 ## ライブラリ
-   `Calculator.mpy`, `Qnum.mpy`
+   [`Calculator.mpy`](/libsrc/Calculator.py), [`Qnum.mpy`](/libsrc/Qnum.py)
 
 ## 操作
 - ↑↓←→ でカーソルを移動し、"X" で入力します。

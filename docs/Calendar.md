@@ -7,10 +7,10 @@
 [![YouTube](./Calendar.jpg)](https://www.youtube.com/watch?v=IUePYXmEb-8)
 
 ## ファイル
-   `calendar.py`
+   [`calendar.py`](/CIRCUITPY/calendar.py)
 
 ## ライブラリ
-   `TinyCalendar.mpy`
+   [`TinyCalendar.mpy`](/libsrc/TinyCalendar.py)
 
 ## 操作
 - ←→ : 前後の月に移動します。

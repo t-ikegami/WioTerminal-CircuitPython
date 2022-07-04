@@ -7,7 +7,7 @@ https://www.hackster.io/SeeedStudio/dual-band-wifi-analyzer-with-wio-terminal-a8
 [![YouTube](./WiFiAnalyzer.jpg)](https://www.youtube.com/watch?v=btvbIqKud4k)
 
 ## ファイル
-   `wifi_analyzer.py`
+   [`wifi_analyzer.py`](/CIRCUITPY/wifi_analyzer.py)
 
 ## 操作
 - "2" で詳細表示します。

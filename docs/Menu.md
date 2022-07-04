@@ -8,7 +8,7 @@
 [![YouTube](./Menu.jpg)](https://www.youtube.com/watch?v=ZSyzFWfQR3k)
 
 ## ファイル
-   `main.py`
+   [`main.py`](/CIRCUITPY/main.py)
 
 ## ライブラリ
    ` Menu.mpy`, `wio_terminal_rtl/__init__.mpy`

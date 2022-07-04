@@ -6,10 +6,10 @@
 [![YouTube](./HourGlass.jpg)](https://www.youtube.com/watch?v=BhjzPFRIgL4)
 
 ## ファイル
-   `hour_glass.py`, `HG_Lower.bmp`, `HG_Upper.bmp`, `HG_Glass.bmp`, `HG_Sand.bmp`
+   [`hour_glass.py`](/CIRCUITPY/hour_glass.py), `HG_Lower.bmp`, `HG_Upper.bmp`, `HG_Glass.bmp`, `HG_Sand.bmp`
 
 ## ライブラリ
-   `HourGlass.mpy`
+   [`HourGlass.mpy`](/libsrc/HourGlass.py)
 
 ## 操作
 ```

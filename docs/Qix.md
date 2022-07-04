@@ -7,7 +7,7 @@ CircuitPython のモジュール、bitmaptools を使っています。
 [![YouTube](./Qix.jpg)](https://www.youtube.com/watch?v=V9FiKQwZg_w)
 
 ## ファイル
-   `qix.py`
+   [`qix.py`](/CIRCUITPY/qix.py)
 
 ## 操作
 ```

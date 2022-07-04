@@ -11,7 +11,7 @@ https://www.instructables.com/PasswordVault-Make-a-Wio-Terminal-Type-Your-Passwo
 [![YouTube](./PasswordVault.jpg)](https://www.youtube.com/watch?v=4H1D4gQJL-o)
 
 ## ファイル
-   `PasswordVault.py`, `vault.enc` (最初は空のファイルを用意)
+   [`PasswordVault.py`](/CIRCUITPY/PasswordVault.py), `vault.enc` (最初は空のファイルを用意)
 
 ## ライブラリ
    `adafruit_hid/`

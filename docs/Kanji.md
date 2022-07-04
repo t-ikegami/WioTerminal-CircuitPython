@@ -13,7 +13,7 @@ https://rictyfonts.github.io <br/>
    `font/RictyKanji.bin`
 
 ## ライブラリ
-   `RictyKanji.mpy`
+   [`RictyKanji.mpy`](/libsrc/RictyKanji.py)
 
 ## 操作
 ```

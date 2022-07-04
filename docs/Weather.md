@@ -10,7 +10,7 @@ Yahoo! の rss に HTTPS 接続して天気情報を取得し、表示します�
 [![YouTube](./Weather.jpg)](https://www.youtube.com/watch?v=U0EXut60uTI)
 
 ## ファイル
-   `weather.py`
+   [`weather.py`](/CIRCUITPY/weather.py)
 
 ## 問題点
 当初、tenki.jp への接続を試みましたが、うまくいきませんでした。

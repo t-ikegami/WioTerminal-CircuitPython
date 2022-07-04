@@ -10,7 +10,7 @@ http://www.asciimation.co.nz
 データ圧縮のため、`uzlib` 込みのカスタムファームウェアが必要になります。
 
 ## ファイル
-   `starwars.py`, `sw1.txt.gz`
+   [`starwars.py`](/CIRCUITPY/starwars.py), `sw1.txt.gz`
 
 ## 操作
 - "X" : 早送りします。

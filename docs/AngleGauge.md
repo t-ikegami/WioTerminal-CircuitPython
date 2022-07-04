@@ -5,7 +5,7 @@
 https://hackaday.io/project/184322-nixie-tubed-angle-gauge
 
 ## ファイル
-   `angle_gauge.py`
+   [`angle_gauge.py`](/CIRCUITPY/angle_gauge.py)
 
 ## 操作
 直立させた状態が 0 度です。

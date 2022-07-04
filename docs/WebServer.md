@@ -10,10 +10,10 @@ Wio Terminal 上にアクセスポイントを立て、そこで Web Server を�
 [![YouTube](./WebServer.jpg)](https://www.youtube.com/watch?v=K_zljt7O878)
 
 ## ファイル
-   `Lchika_AP.py`
+   [`Lchika_AP.py`](/CIRCUITPY/Lchika_AP.py)
 
 ## ライブラリ
-   `wifi_start_ap.mpy`
+   [`wifi_start_ap.mpy`](/libsrc/wifi_start_ap.py)
 
 ## 操作
 SSID "Lchika_AP", Password "Wio Terminal" でアクセスポイントに接続します。

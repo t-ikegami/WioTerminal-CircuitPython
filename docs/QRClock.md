@@ -9,7 +9,7 @@ https://play.google.com/store/apps/details?id=net.loves8bit.qrclock
 [![YouTube](./QRClock.jpg)](https://www.youtube.com/watch?v=-cszslRbCgc)
 
 ## ファイル
-   `qrclock.py`
+   [`qrclock.py`](/CIRCUITPY/qrclock.py)
 
 ## ライブラリ
    `adafrui_miniqr.mpy`

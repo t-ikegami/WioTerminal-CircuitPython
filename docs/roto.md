@@ -6,10 +6,10 @@
 [![YouTube](./roto.jpg)](https://www.youtube.com/watch?v=DdqUJ4dByI4)
 
 ## ファイル
-   `roto.py`
+   [`roto.py`](/CIRCUITPY/roto.py)
 
 ## ライブラリ
-   `adafruit_lis3dh.mpy`, `MotionEvents.mpy`
+   [`adafruit_lis3dh.mpy`](/libsrc/adafruit_lis3dh.py), [`MotionEvents.mpy`](/libsrc/MotionEvents.py)
 
 ## 操作
 ```
