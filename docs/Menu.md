@@ -14,8 +14,6 @@ https://github.com/pypewpew/game-m4-menu
    [`main.py`](/CIRCUITPY/main.py)
 
 ## ライブラリ
-## ライブラリ
-   [`Calculator.mpy`](/libsrc/Calculator.py), [`Qnum.mpy`](/libsrc/Qnum.py)
    [` Menu.mpy`](/libsrc/Menu.py), [`wio_terminal_rtl/__init__.mpy`](/libsrc/wio_terminal_rtl/__init__.py)
 
 ## 操作
