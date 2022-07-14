@@ -9,7 +9,7 @@
    [`roto.py`](/CIRCUITPY/roto.py)
 
 ## ライブラリ
-   [`adafruit_lis3dh.mpy`](/libsrc/adafruit_lis3dh.py), [`MotionEvents.mpy`](/libsrc/MotionEvents.py)
+   `adafruit_lis3dh.mpy`, [`MotionEvents.mpy`](/libsrc/MotionEvents.py)
 
 ## 操作
 ```
